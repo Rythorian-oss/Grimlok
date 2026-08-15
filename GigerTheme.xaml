@@ -1,0 +1,232 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Color Palette - H.R. Giger Biomechanical Dark Theme -->
+    <Color x:Key="BioDarkBgColor">#0A0A0C</Color>
+    <Color x:Key="BioPanelBgColor">#12141A</Color>
+    <Color x:Key="BioCardBgColor">#1A1D26</Color>
+    <Color x:Key="BioBorderColor">#2A2E3D</Color>
+    <Color x:Key="BioTextBoneColor">#C8D0D8</Color>
+    <Color x:Key="BioTextMutedColor">#6C7A89</Color>
+
+    <!-- Bio Green Colors -->
+    <Color x:Key="BioGreenMainColor">#00FF66</Color>
+    <Color x:Key="BioGreenHoverColor">#00CC52</Color>
+    <Color x:Key="BioGreenBgColor">#0D381E</Color>
+    <Color x:Key="BioGreenBorderColor">#00FF66</Color>
+
+    <!-- Bio Dark Colors -->
+    <Color x:Key="BioDarkBtnBgColor">#1E2028</Color>
+    <Color x:Key="BioDarkBtnHoverColor">#2D313E</Color>
+    <Color x:Key="BioDarkBtnBorderColor">#3A4052</Color>
+
+    <!-- Bio Amber / Rust Colors -->
+    <Color x:Key="BioAmberMainColor">#FFB000</Color>
+    <Color x:Key="BioAmberHoverColor">#E09B00</Color>
+    <Color x:Key="BioAmberBgColor">#382400</Color>
+    <Color x:Key="BioAmberBorderColor">#FFB000</Color>
+
+    <Color x:Key="RustMainColor">#D97706</Color>
+    <Color x:Key="RustHoverColor">#B45309</Color>
+    <Color x:Key="RustBgColor">#2D1A0A</Color>
+    <Color x:Key="RustBorderColor">#D97706</Color>
+
+    <!-- Solid Color Brushes -->
+    <SolidColorBrush x:Key="BioDarkBgBrush" Color="{StaticResource BioDarkBgColor}" />
+    <SolidColorBrush x:Key="BioPanelBgBrush" Color="{StaticResource BioPanelBgColor}" />
+    <SolidColorBrush x:Key="BioCardBgBrush" Color="{StaticResource BioCardBgColor}" />
+    <SolidColorBrush x:Key="BioBorderBrush" Color="{StaticResource BioBorderColor}" />
+    <SolidColorBrush x:Key="BioTextBoneBrush" Color="{StaticResource BioTextBoneColor}" />
+    <SolidColorBrush x:Key="BioTextMutedBrush" Color="{StaticResource BioTextMutedColor}" />
+
+    <SolidColorBrush x:Key="BioGreenMainBrush" Color="{StaticResource BioGreenMainColor}" />
+    <SolidColorBrush x:Key="BioGreenBgBrush" Color="{StaticResource BioGreenBgColor}" />
+    <SolidColorBrush x:Key="BioGreenBorderBrush" Color="{StaticResource BioGreenBorderColor}" />
+
+    <SolidColorBrush x:Key="BioDarkBtnBgBrush" Color="{StaticResource BioDarkBtnBgColor}" />
+    <SolidColorBrush x:Key="BioDarkBtnBorderBrush" Color="{StaticResource BioDarkBtnBorderColor}" />
+
+    <SolidColorBrush x:Key="BioAmberMainBrush" Color="{StaticResource BioAmberMainColor}" />
+    <SolidColorBrush x:Key="BioAmberBgBrush" Color="{StaticResource BioAmberBgColor}" />
+    <SolidColorBrush x:Key="BioAmberBorderBrush" Color="{StaticResource BioAmberBorderColor}" />
+
+    <!-- Rust Brushes -->
+    <SolidColorBrush x:Key="RustMainBrush" Color="{StaticResource RustMainColor}" />
+    <SolidColorBrush x:Key="RustHoverBrush" Color="{StaticResource RustHoverColor}" />
+    <SolidColorBrush x:Key="RustBgBrush" Color="{StaticResource RustBgColor}" />
+    <SolidColorBrush x:Key="RustBorderBrush" Color="{StaticResource RustBorderColor}" />
+
+    <!-- Aliases for missing resources -->
+    <SolidColorBrush x:Key="DarkBorderBrush" Color="{StaticResource BioBorderColor}" />
+    <SolidColorBrush x:Key="BoneMutedBrush" Color="{StaticResource BioTextMutedColor}" />
+    <SolidColorBrush x:Key="BoneWhiteBrush" Color="{StaticResource BioTextBoneColor}" />
+
+    <SolidColorBrush x:Key="BioGreenGlowBrush" Color="{StaticResource BioGreenMainColor}" />
+
+    <!-- Giger Window Style -->
+    <Style x:Key="GigerWindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource BioDarkBgBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BioTextBoneBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontFamily" Value="Segoe UI, sans-serif" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+    </Style>
+
+    <!-- Giger Chrome Border Style -->
+    <Style x:Key="GigerChromeBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource BioPanelBgBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+
+    <!-- Button Styles -->
+    <Style x:Key="BioGreenButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource BioGreenBgBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BioGreenMainBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioGreenBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="12,8" />
+        <Setter Property="Margin" Value="0,4" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#144A28" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#33FF85" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#082614" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.4" />
+                            <Setter Property="Foreground" Value="#558866" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RustButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource RustBgBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource RustMainBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource RustBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="12,8" />
+        <Setter Property="Margin" Value="0,4" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#3D230F" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#F59E0B" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#1A0F06" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.4" />
+                            <Setter Property="Foreground" Value="#886633" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DarkButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource BioDarkBtnBgBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BioTextBoneBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioDarkBtnBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Padding" Value="12,8" />
+        <Setter Property="Margin" Value="0,4" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#2D313E" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#5A6278" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#15171D" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.35" />
+                            <Setter Property="Foreground" Value="#555B6E" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Alias keys used in XAML -->
+    <Style x:Key="GigerButtonBioGreen" TargetType="Button" BasedOn="{StaticResource BioGreenButtonStyle}" />
+    <Style x:Key="GigerButtonRust" TargetType="Button" BasedOn="{StaticResource RustButtonStyle}" />
+
+    <!-- Reuse other styles -->
+    <Style x:Key="GigerPanelStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource BioPanelBgBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="Padding" Value="8" />
+    </Style>
+
+    <Style x:Key="GigerCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Foreground" Value="{StaticResource BioTextBoneBrush}" />
+        <Setter Property="Margin" Value="0,6" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style x:Key="GigerSliderStyle" TargetType="Slider">
+        <Setter Property="Margin" Value="0,4,0,8" />
+    </Style>
+
+    <Style x:Key="GigerListBoxStyle" TargetType="ListBox">
+        <Setter Property="Background" Value="{StaticResource BioCardBgBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BioTextBoneBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BioBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="4" />
+    </Style>
+
+</ResourceDictionary>

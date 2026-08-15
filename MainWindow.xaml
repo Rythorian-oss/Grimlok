@@ -1,0 +1,78 @@
+<Window x:Class="Grimlok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GRIMLOK - Biomechanical Security Monitor" Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource GigerWindowStyle}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Style="{StaticResource GigerChromeBorder}" Padding="10" Margin="0,0,0,10">
+            <DockPanel>
+                <TextBlock Text="GRIMLOK // SECURITY MONITORING SYSTEM" FontSize="18" FontWeight="Bold" Foreground="{StaticResource BioGreenGlowBrush}" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="BtnStart" Content="START MONITOR" Style="{StaticResource GigerButtonBioGreen}" Margin="4,0" Click="BtnStart_Click"/>
+                    <Button x:Name="BtnStop" Content="STOP MONITOR" Style="{StaticResource GigerButtonRust}" Margin="4,0" Click="BtnStop_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Main Content Panel -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+          <!-- Video Feed Placeholder -->
+            <GroupBox Grid.Column="0" Header="LIVE FEED [PRIMARY PROBE]" Margin="0,0,5,0">
+                <Grid Background="#050507">
+                    <Border BorderBrush="{StaticResource DarkBorderBrush}" BorderThickness="1" Margin="10">
+                        <Grid>
+                            <!-- Added the Image control to display the JPEG frames -->
+                            <Image x:Name="ImgFeed" Stretch="Uniform" />
+                            
+                            <TextBlock x:Name="TxtFeedStatus" Text="[ CAMERA STREAM INACTIVE - PRESS START MONITOR ]"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       Foreground="{StaticResource BoneMutedBrush}" FontSize="14"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </GroupBox>
+
+            <!-- Control & Telemetry Sidebar -->
+            <GroupBox Grid.Column="1" Header="BIOMECHANICAL CONTROLS" Margin="5,0,0,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="5">
+                        <Label Content="MOTION SENSITIVITY THRESHOLD"/>
+                        <Slider x:Name="SliderThreshold" Minimum="1" Maximum="100" Value="22" Margin="0,0,0,10"/>
+
+                        <CheckBox x:Name="ChkYolo" Content="ENABLE YOLO OBJECT DETECTION" IsChecked="True" Margin="0,5,0,10"/>
+                        <CheckBox x:Name="ChkHumanOnly" Content="HUMAN CONFIRMED ONLY" IsChecked="True" Margin="0,0,0,10"/>
+
+                        <Label Content="DETECTION LOGS"/>
+                        <ListBox x:Name="LstEvents" Height="200" Margin="0,5,0,10">
+                            <ListBoxItem Content="[00:00:00] SYSTEM INITIALIZED"/>
+                            <ListBoxItem Content="[00:00:01] SENSORS ONLINE"/>
+                        </ListBox>
+
+                        <ProgressBar x:Name="ProgressActivity" Value="45" Maximum="100" Height="10" Margin="0,10"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </GroupBox>
+        </Grid>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="2" Background="#0A0A0C" BorderBrush="{StaticResource DarkBorderBrush}" BorderThickness="1" Padding="8,4" Margin="0,10,0,0">
+            <DockPanel>
+                <TextBlock x:Name="TxtStatus" Text="STATUS: READY" Foreground="{StaticResource BoneWhiteBrush}"/>
+                <TextBlock Text="GRIMLOK v1.0 // H.R. GIGER THEME" HorizontalAlignment="Right" Foreground="{StaticResource BoneMutedBrush}"/>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
