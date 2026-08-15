@@ -1,5 +1,17 @@
 using System.ComponentModel.DataAnnotations;
-
+#region SYSTEM INITIALIZATION : BLACK STAR PROJECT
+// ========================================================================
+//   ____  _        _    ____ _  __  ____ _____  _    ____  
+//  | __ )| |      / \  / ___| |/ / / ___|_   _|/ \  |  _ \ 
+//  |  _ \| |     / _ \| |   | ' /  \___ \ | | / _ \ | |_) |
+//  | |_) | |___ / ___ \ |___| . \   ___) || |/ ___ \|  _ < 
+//  |____/|_____/_/   \_\____|_|\_\ |____/ |_/_/   \_\_| \_\
+//                                                          
+//              R E S E A R C H   F A C I L I T Y           
+//                                                          
+//             [ LOCATION: ICELAND ]            
+// ========================================================================
+#endregion
 namespace Grimlok.Configuration;
 
 public sealed class GrimlokOptions
