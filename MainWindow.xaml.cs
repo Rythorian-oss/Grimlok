@@ -4,7 +4,19 @@ using Grimlok.Services;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
-
+#region SYSTEM INITIALIZATION : BLACK STAR PROJECT
+// ========================================================================
+//   ____  _        _    ____ _  __  ____ _____  _    ____  
+//  | __ )| |      / \  / ___| |/ / / ___|_   _|/ \  |  _ \ 
+//  |  _ \| |     / _ \| |   | ' /  \___ \ | | / _ \ | |_) |
+//  | |_) | |___ / ___ \ |___| . \   ___) || |/ ___ \|  _ < 
+//  |____/|_____/_/   \_\____|_|\_\ |____/ |_/_/   \_\_| \_\
+//                                                          
+//              R E S E A R C H   F A C I L I T Y           
+//                                                          
+//             [ LOCATION: ICELAND ]            
+// ========================================================================
+#endregion
 namespace Grimlok
 {
     public partial class MainWindow : Window
